@@ -2,11 +2,12 @@
 
 
  namespace App\Http\Controllers;
-
+ use App\Post;
  class SehifeController extends Controller{
 
    public function getIndex(){
-     return view("pages/welcome");
+	 $posts = Post::orderBy("created_at","desc")->limit(4)->get();
+     return view("pages/welcome").withPosts($posts);
    }
 
    public function getAbout(){
