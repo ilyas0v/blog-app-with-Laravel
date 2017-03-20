@@ -39,11 +39,13 @@ class PostController extends Controller
     {
         $this->validate($request,array(
           "title" => "required|max:255",
-          "body"  => "required"
+          "body"  => "required",
+          "slug"  => "required|alpha_dash|min:5|max:255|unique:posts,slug"
         ));
 
         $post = new Post;
         $post->title = $request->title;
+        $post->slug = $request->slug;
         $post->body = $request->body;
         $post->save();
         Session::flash("success" , "The post was succesfully saved!");
@@ -81,16 +83,26 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-      $this->validate($request , array(
-      'title' => 'required|max:255',
-      'body'  => 'required'
-      ));
+    public function update(Request $request, $id){
+      $post = Post::find($id);
+      if($request->input("slug") === $post->slug){
+        $this->validate($request , array(
+        'title' => 'required|max:255',
+        'body'  => 'required'
+        ));
+      }else{
+        $this->validate($request , array(
+        'title' => 'required|max:255',
+        'slug'  => "required|alpha_dash|min:5|max:255|unique:posts,slug",
+        'body'  => 'required'
+        ));
+      }
+
 
       $post = Post::find($id);
 
       $post->title = $request->input('title');
+      $post->slug = $request->input('slug');
       $post->body  = $request->input('body');
 
       $post->save();

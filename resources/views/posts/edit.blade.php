@@ -9,6 +9,10 @@
     <div class="col-md-8">
         {{ Form::label("title", "Title: ")}}
         {{ Form::text("title", null , array("class"=>"form-control input-lg"))  }}
+
+				{{ Form::label("slug", "Slug: ")}}
+        {{ Form::text("slug", null , array("class"=>"form-control input-lg"))  }}
+
         {{ Form::label("body", "Body: ")}}
         {{ Form::textarea("body", null , array("class"=>"form-control"))  }}
     </div>

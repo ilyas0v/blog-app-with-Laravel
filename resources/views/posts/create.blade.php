@@ -8,10 +8,16 @@
         <h1>Create new post</h1>
         <hr>
         {!! Form::open(['route' => 'posts.store']) !!}
-          {{ Form::label("title", "Title") }}
-          {{ Form::text("title",null ,array("class"=>"form-control")) }}
-          {{ Form::label("body","Post body") }}
-          {{ Form::textarea("body", null , array("class"=>"form-control")) }}
+          {{ Form::label("title", "Title:") }}
+          {{ Form::text("title",null ,array("class"=>"form-control" , "required"=>"")) }}
+
+          {{ Form::label("slug","Slug:") }}
+          {{ Form::text("slug",null,["class"=>"form-control" , "required"=>""]) }}
+
+          {{ Form::label("body","Post body:") }}
+          {{ Form::textarea("body", null , array("class"=>"form-control","required"=>"")) }}
+
+
           {{ Form::submit("Create post" , array("class"=>"btn btn-success btn-lg btn-block",
           "style"=>"margin-top:15px;")) }}
         {!! Form::close() !!}
