@@ -7,7 +7,7 @@
       @include("partials.nav")
       <div class="container">
         @include("partials.messages")
-          @yield("content")
+        @yield("content")
       </div>
       @include("partials.javascripts")
   </body>
