@@ -1,0 +1,66 @@
+[33mcommit bb16db3c69275174dc9952cc296269c14359a72d[m
+Author: ilyas <ilyas.ilyasov.1@gmail.com>
+Date:   Wed Mar 22 02:59:12 2017 +0400
+
+    Added  Login , Registration and Logout features
+
+[33mcommit 35680575689898e396fd6541c07f8fee1ac4572b[m
+Author: ilyas <ilyas.ilyasov.1@gmail.com>
+Date:   Tue Mar 21 03:06:08 2017 +0400
+
+    register login views
+
+[33mcommit 9d0d0e09030a83e48401f2d42dad81506b1e98a8[m
+Merge: dc7dc0e 39934ec
+Author: ilyas <ilyas.ilyasov.1@gmail.com>
+Date:   Tue Mar 21 02:33:41 2017 +0400
+
+    Merge branch 'master' of https://github.com/ilyas0v/blog-app-with-Laravel
+
+[33mcommit dc7dc0e5048ef18269fc9798beae6dd251b1d253[m
+Author: ilyas <ilyas.ilyasov.1@gmail.com>
+Date:   Tue Mar 21 02:33:18 2017 +0400
+
+    added slug to posts
+
+[33mcommit 39934ec695f1663a5843c73c5b58e0add143ec67[m
+Author: Ilyas Ilyasov <Ilyas Ilyasov>
+Date:   Mon Mar 20 07:35:31 2017 +0400
+
+    added login and register views
+
+[33mcommit 002bb7d987dbd297ed35d3cb0d4d7967972dba96[m
+Author: ilyas0v <ilyas.ilyasov.1@gmail.com>
+Date:   Mon Mar 20 01:17:27 2017 +0400
+
+    Update SehifeController.php
+
+[33mcommit e67dc9be95076eb18379db1c5fd45dee7da78380[m
+Author: Ilyas Ilyasov <Ilyas Ilyasov>
+Date:   Thu Mar 16 11:36:02 2017 +0400
+
+    Fetching posts to homepage | Use of querybuilder
+
+[33mcommit 90e231b0a65c951dae21103a861a86c9a19ab0b2[m
+Author: Ilyas Ilyasov <Ilyas Ilyasov>
+Date:   Thu Mar 16 06:03:25 2017 +0400
+
+    added Pagination functionality
+
+[33mcommit a8e7867e6a4a7e0d570a2b1547c9c7b3c8312570[m
+Author: Ilyas Ilyasov <Ilyas Ilyasov>
+Date:   Thu Mar 16 05:37:35 2017 +0400
+
+    changes in description..
+
+[33mcommit 7764a1c6602108144619ec28dd44bc6c22a496c2[m
+Author: ilyas <ilyas.ilyasov.1@gmail.com>
+Date:   Mon Mar 13 16:15:15 2017 +0400
+
+    Adding posts to navbar
+
+[33mcommit c2aa60e29f3b957b95e5cd453fdc55225a0809cd[m
+Author: ilyas <ilyas.ilyasov.1@gmail.com>
+Date:   Mon Mar 13 15:56:54 2017 +0400
+
+    ilk commit
