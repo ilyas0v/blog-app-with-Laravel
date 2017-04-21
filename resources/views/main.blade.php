@@ -10,5 +10,6 @@
         @yield("content")
       </div>
       @include("partials.javascripts")
+      @yield('scripts')
   </body>
 </html>

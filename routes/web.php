@@ -30,6 +30,11 @@ Route::group(["middleware"=>["web"]], function(){
       return view("pages/contact");
     });
 
+    Route::post('contact' , 'SehifeController@postContact');
+    //Route::get('sendd', 'SehifeController@sendd');
+    Route::resource('categories' , 'CategoryController' , ['except'=>['create']]);
+    Route::resource('tags' , 'TagController' , ['except'=>['create']]);
+
     Route::resource("posts" , "PostController");
 	  Route::get("blog/{slug}" , ["as"=>"blog.single", "uses"=>"BlogController@getSingle"])
         ->where("slug","[\w\d\-\_]+");

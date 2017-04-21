@@ -2,6 +2,10 @@
 
 @section("title", " | Edit post")
 
+@section('stylesheets')
+  {!! Html::style('css/select2.min.css') !!}
+@endsection
+
 @section("content")
 
 	<div class="row">
@@ -12,6 +16,12 @@
 
 				{{ Form::label("slug", "Slug: ")}}
         {{ Form::text("slug", null , array("class"=>"form-control input-lg"))  }}
+
+				{{ Form::label("category_id", "Category: ")}}
+				{{ Form::select("category_id" , $categories , null ,['class'=>'form-control'])}}
+
+        {{ Form::label("tags", "Tags: ")}}
+				{{ Form::select("tags[]" , $tags , null ,['class'=>'select2-multi form-control','multiple'=>'multiple'])}}
 
         {{ Form::label("body", "Body: ")}}
         {{ Form::textarea("body", null , array("class"=>"form-control"))  }}
@@ -49,6 +59,13 @@
     </div>
     {!!Form::close()!!}
 </div>
+@endsection
 
+@section('scripts')
+{!! Html::script('js/select2.min.js') !!}
+<script>
 
+    $('.select2-multi').select2();
+    
+</script>
 @endsection
